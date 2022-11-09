@@ -5,7 +5,7 @@ ARG NGINX_VERSION=1.23.2
 ARG NGINX_COMMIT=3be953161026
 
 # https://github.com/google/ngx_brotli
-ARG NGX_BROTLI_COMMIT=6e975bcb015f62e1f303054897783355e2a877dc
+ARG NGX_BROTLI_COMMIT=c187153ec9c9841c0fb0758a4921a41fbf618725
 
 # https://github.com/google/boringssl
 ARG BORINGSSL_COMMIT=8ce0e1c14e48109773f1e94e5f8b020aa1e24dc5
@@ -125,7 +125,7 @@ RUN \
 	&& mkdir /usr/src/ngx_brotli \
 	&& cd /usr/src/ngx_brotli \
 	&& git init \
-	&& git remote add origin https://github.com/google/ngx_brotli.git \
+	&& git remote add origin https://github.com/victorcrimea/ngx_brotli.git \
 	&& git fetch --depth 1 origin $NGX_BROTLI_COMMIT \
 	&& git checkout --recurse-submodules -q FETCH_HEAD \
 	&& git submodule update --init --depth 1
